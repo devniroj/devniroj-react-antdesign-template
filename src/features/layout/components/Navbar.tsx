@@ -11,7 +11,10 @@ export const Navbar = () => {
         style={{ lineHeight: '64px' }}
       >
         <Menu.Item key="1">
-            <Link to="/">Dashboard</Link>
+            <a href="/" >Dashboard</a>
+        </Menu.Item>
+        <Menu.Item key="2">
+            <a href="/kpi">KPIs</a>
         </Menu.Item>
       </Menu>
   )
