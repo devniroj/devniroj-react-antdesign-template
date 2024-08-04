@@ -1,15 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Layout, Menu, Breadcrumb } from 'antd';
+import { Content, Footer, Header } from 'antd/es/layout/layout';
+import { Navbar } from './features/layout/components/Navbar';
+import { BrowserRouter, RouterProvider } from 'react-router-dom';
+import { routes } from './features/layout/data/routes';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Layout>
+    <Header style={{ position: 'fixed', width: '100%' }}>
+      <div className="logo" />
+      <Navbar />
+    </Header>
+    <Content style={{ padding: '0 50px', marginTop: 64 }}>
+      <Breadcrumb style={{ margin: '16px 0' }}>
+        <Breadcrumb.Item>Home</Breadcrumb.Item>
+        <Breadcrumb.Item>List</Breadcrumb.Item>
+        <Breadcrumb.Item>App</Breadcrumb.Item>
+      </Breadcrumb>
+     {/* <RouterProvider router={routes}/> */}
+      <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>
+      <RouterProvider router={routes}/>
+      </div>
+     
+    </Content>
+    <Footer style={{ textAlign: 'center' }}>
+      Ant Design ©2016 Created by Ant UED
+    </Footer>
+  </Layout>
   </React.StrictMode>
 );
 
