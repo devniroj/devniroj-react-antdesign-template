@@ -1,8 +1,7 @@
 import { Menu } from 'antd'
-import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <Menu
         theme="dark"
@@ -11,11 +10,13 @@ export const Navbar = () => {
         style={{ lineHeight: '64px' }}
       >
         <Menu.Item key="1">
-            <a href="/" >Dashboard</a>
+            <Link to="/">Dashboard</Link>
         </Menu.Item>
         <Menu.Item key="2">
-            <a href="/kpi">KPIs</a>
+            <Link to="/kpi">KPIs</Link>
         </Menu.Item>
       </Menu>
   )
 }
+
+export default Navbar;
