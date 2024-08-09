@@ -13,7 +13,7 @@ const Navbar = () => {
             <Link to="/">Dashboard</Link>
         </Menu.Item>
         <Menu.Item key="2">
-            <Link to="/kpi">KPIs</Link>
+            <Link to="/kpis">KPIs</Link>
         </Menu.Item>
       </Menu>
   )

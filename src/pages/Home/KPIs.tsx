@@ -1,7 +1,8 @@
 import React from 'react'
 
-export const KPIs = () => {
+const KPIs = () => {
   return (
     <div>KPIs</div>
   )
 }
+export default KPIs;
